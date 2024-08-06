@@ -15,6 +15,14 @@ $startTime = $endTime.AddMonths(-1)
 $endTime | Format-Table -AutoSize
 $startTime | Format-Table -AutoSize
 
+# 일자 지정
+$startDate = Read-Host "Enter the start date (YYYY-MM-DD)"
+$endDate = Read-Host "Enter the end date (YYYY-MM-DD)"
+
+$startDateTime = [datetime]::ParseExact($startDate, 'yyyy-MM-dd', $null)
+$endDateTime = [datetime]::ParseExact($endDate, 'yyyy-MM-dd', $null)
+
+
 # 모든 ESXi 호스트 가져옴
 $hosts = Get-VMHost
 $hosts | Format-Table -AutoSize
