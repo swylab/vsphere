@@ -1,1 +1,5 @@
-
+1-check_cert.sh 파일 실행   #vCenter 인증서 만료 일자 확인
+checksts.py 파일 실행   # STS 인증서 확인
+fixsts.sh 파일 실행   # STS 인증서 갱신
+fix_encipherment_cert.sh    # 데이터 암호 인증서 교체 (data-encipherment) 
+clean_backup_stores.sh    #백업본 삭제
